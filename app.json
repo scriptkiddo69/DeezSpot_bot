@@ -1,1 +1,16 @@
-{ "image": "heroku/python" }
+{
+  "name": "DeezloaderRemixLoLBot",
+  "description": "A tb DeezloaderRemixLoLBot. Powered by Heroku.",
+  "image": "heroku/python",
+  "repository": "https://github.com/scriptkiddo69/DeezSpot_bot/",
+  "keywords": ["python", "tgapi" ],
+
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python run.py",
+        "test": "python run.py"
+      }
+    }
+  }
+}
