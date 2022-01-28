@@ -1,1 +1,1 @@
-worker: python dwsongs-normal.py
+worker: python3 deez_bot.py
