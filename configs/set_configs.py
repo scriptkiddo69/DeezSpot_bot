@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from pyrogram import Client
-from deezloader import Login
+from deezloader import DeeLogin
 from acrcloud import ACRcloud
 from telegram.ext import Updater
 from configparser import ConfigParser
