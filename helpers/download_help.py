@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 
+from pyrogram import Client
 from time import sleep
 from io import BytesIO
-from pyrogram import Client
+from os.path import isfile
 from telegram import ChatAction
 from sqlite3 import IntegrityError
 from telegram.error import BadRequest
-from logging import error as log_error
-from contextlib import redirect_stdout
 from deezloader.models.track import Track
 from deezloader.models.album import Album
-from deezloader.__utils__ import what_kind
+from configs.set_configs import SetConfigs
 from deezloader.exceptions import TrackNotFound
-from deezloader.__dee_api__ import API as deezer_API
-from configs.set_configs import deez_api, tg_bot_api
+from deezloader.libutils.utils import request, what_kind
 from inlines.inline_keyboards import create_keyboard_artist
+from deezloader.deezloader.dee_api import API as deezer_API
 
 from .db_help import (
 	write_dwsongs, select_dwsongs, delete_dwsongs
